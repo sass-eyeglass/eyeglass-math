@@ -1,0 +1,8 @@
+// This module unprefixes the global functions when you import it.
+
+$pi: 3.141592653589793;
+$tau: 2 * $pi;
+
+@function sin($angle) {
+  @return math-sin($angle);
+}
