@@ -1,8 +1,97 @@
 // This module unprefixes the global functions when you import it.
 
-$pi: 3.141592653589793;
-$tau: 2 * $pi;
+$PI: 3.141592653589793;
+$TAU: 2 * $PI;
+$E: 2.718281828459045;
+
+@function acos($number) {
+  @return math-acos($number);
+}
+
+@function acosh($number) {
+  @return math-acosh($number);
+}
+
+@function asin($number) {
+  @return math-asin($number);
+}
+
+@function asinh($number) {
+  @return math-asinh($number);
+}
+
+@function atan($number) {
+  @return math-atan($number);
+}
+
+@function atanh($number) {
+  @return math-atanh($number);
+}
+
+@function cbrt($number) {
+  @return math-cbrt($number);
+}
+
+@function cos($angle) {
+  @return math-cos(0rad + $angle); // convert argument to radians.
+}
+
+@function cosh($number) {
+  @return math-cosh($number);
+}
+
+@function exp($number) {
+  @return math-exp($number);
+}
+
+@function hypot($numbers...) {
+  @return math-hypot($numbers...);
+}
+
+@function log($number) {
+  @return math-log($number);
+}
+
+@function ln($number) {
+  @return math-ln($number);
+}
+
+@function log10($number) {
+  @return math-log10($number);
+}
+
+@function log2($number) {
+  @return math-log2($number);
+}
+
+@function pow($base, $exponent) {
+  @return math-pow($base, $exponent);
+}
+
+@function sign($number) {
+  @return math-sign($number);
+}
 
 @function sin($angle) {
-  @return math-sin($angle);
+  @return math-sin(0rad + $angle); // convert argument to radians.
+}
+
+@function sinh($number) {
+  @return math-sinh($number);
+}
+
+@function sqrt($number) {
+  @return math-sqrt($number);
+}
+
+@function tan($angle) {
+  @return math-tan(0rad + $angle); // convert argument to radians.
+}
+
+@function tanh($number) {
+  @return math-tanh($number);
+}
+
+@function trunc($number) {
+  @return math-trunc($number);
 }
