@@ -1,0 +1,3 @@
+@function sign($number) {
+  @return math-sign($number);
+}

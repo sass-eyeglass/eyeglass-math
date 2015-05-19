@@ -1,0 +1,23 @@
+@function acosh($number) {
+  @return math-acosh($number);
+}
+
+@function asinh($number) {
+  @return math-asinh($number);
+}
+
+@function atanh($number) {
+  @return math-atanh($number);
+}
+
+@function cosh($number) {
+  @return math-cosh($number);
+}
+
+@function sinh($number) {
+  @return math-sinh($number);
+}
+
+@function tanh($number) {
+  @return math-tanh($number);
+}

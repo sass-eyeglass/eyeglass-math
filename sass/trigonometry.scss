@@ -1,0 +1,30 @@
+$PI: 3.141592653589793;
+$TAU: 2 * $PI;
+
+@function acos($number) {
+  @return math-acos($number);
+}
+
+@function asin($number) {
+  @return math-asin($number);
+}
+
+@function atan($number) {
+  @return math-atan($number);
+}
+
+@function cos($angle) {
+  @return math-cos(0rad + $angle); // convert argument to radians.
+}
+
+@function hypot($numbers...) {
+  @return math-hypot($numbers...);
+}
+
+@function sin($angle) {
+  @return math-sin(0rad + $angle); // convert argument to radians.
+}
+
+@function tan($angle) {
+  @return math-tan(0rad + $angle); // convert argument to radians.
+}

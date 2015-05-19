@@ -30,7 +30,7 @@ module.exports = function(eyeglass, sass) {
       "math-acos($number)": function(number, done) {
         try {
           assertUnitless(number);
-          done(sass.types.Number(Math.acos(number.getValue())));
+          done(sass.types.Number(Math.acos(number.getValue()), "rad"));
         } catch (e) {
           done(sass.types.Error(e.toString()));
         }
@@ -46,7 +46,7 @@ module.exports = function(eyeglass, sass) {
       "math-asin($number)": function(number, done) {
         try {
           assertUnitless(number);
-          done(sass.types.Number(Math.asin(number.getValue())));
+          done(sass.types.Number(Math.asin(number.getValue()), "rad"));
         } catch (e) {
           done(sass.types.Error(e.toString()));
         }
@@ -62,7 +62,7 @@ module.exports = function(eyeglass, sass) {
       "math-atan($number)": function(number, done) {
         try {
           assertUnitless(number);
-          done(sass.types.Number(Math.atan(number.getValue())));
+          done(sass.types.Number(Math.atan(number.getValue()), "rad"));
         } catch (e) {
           done(sass.types.Error(e.toString()));
         }
