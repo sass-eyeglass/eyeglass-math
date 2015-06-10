@@ -173,7 +173,7 @@ describe("math", function () {
       var options = {
         data: "@import 'math/trigonometry'; .math { tan: tan($PI); }"
       };
-      var expectedOutput = ".math {\n  tan: 0.0; }\n";
+      var expectedOutput = ".math {\n  tan: 0; }\n";
       testutils.assertCompiles(options, expectedOutput, done);
     });
   });
