@@ -167,6 +167,13 @@ module.exports = function(eyeglass, sass) {
           done(sass.types.Error(e.toString()));
         }
       },
+      "math-roundTo($number, $decimalPlaces)": function (number, decimalPlaces, done) {
+        try {
+          done(sass.types.Number(Number(Math.round(number + 'e' + decimalPlaces) + 'e-' + decimalPlaces)));
+        } catch (e) {
+          done(sass.types.Error(e.toString()));
+        }
+      },
       "math-sign($number)": function(number, done) {
         try {
           done(sass.types.Number(Math.sign(number.getValue())));

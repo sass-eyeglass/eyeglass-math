@@ -124,6 +124,13 @@ describe("math", function () {
       var expectedOutput = ".math {\n  sign-zero: 0;\n  sign-pos: 1;\n  sign-neg: -1; }\n";
       testutils.assertCompiles(options, expectedOutput, done);
     });
+    it("roundTo($number, $decimalPlaces)", function (done) {
+      var options = {
+        data: "@import 'math/numeric'; .math { roundTo3dP: roundTo(3.14159265359, 3); roundTo5dP: roundTo(3.14159265359, 5); }"
+      };
+      var expectedOutput = ".math { roundTo3dP: 3.142; roundTo5dP: 3.14159; }";
+      testutils.assertCompiles(options, expectedOutput, done);
+    });
   });
 
   describe("trigonometric functions", function () {

@@ -1,3 +1,7 @@
 @function sign($number) {
   @return math-sign($number);
 }
+
+@function roundTo($number, $decimalPlaces) {
+  @return math-roundTo($number, $decimalPlaces);
+}
