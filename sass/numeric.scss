@@ -2,6 +2,7 @@
   @return math-sign($number);
 }
 
-@function roundTo($number, $decimalPlaces) {
-  @return math-roundTo($number, $decimalPlaces);
+@function round-to($number, $decimalPlaces: 3) {
+  $dp: math-pow(10, $decimalPlaces);
+  @return round($number * $dp) / $dp;
 }

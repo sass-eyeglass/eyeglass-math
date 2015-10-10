@@ -126,7 +126,7 @@ module.exports = function(eyeglass, sass) {
           }
           var unit = numbers.getValue(0).getUnit();
           for (var i = 0; i < numbers.getLength(); i++) {
-            assertUnit(numbers.getValue(i), unit); 
+            assertUnit(numbers.getValue(i), unit);
             jsValues.push(numbers.getValue(i).getValue());
           }
           done(sass.types.Number(Math.hypot.apply(Math, jsValues), unit));
@@ -163,13 +163,6 @@ module.exports = function(eyeglass, sass) {
           assertUnitless(base);
           assertUnitless(exponent);
           done(sass.types.Number(Math.pow(base.getValue(), exponent.getValue())));
-        } catch (e) {
-          done(sass.types.Error(e.toString()));
-        }
-      },
-      "math-roundTo($number, $decimalPlaces)": function (number, decimalPlaces, done) {
-        try {
-          done(sass.types.Number(Number(Math.round(number + 'e' + decimalPlaces) + 'e-' + decimalPlaces)));
         } catch (e) {
           done(sass.types.Error(e.toString()));
         }

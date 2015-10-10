@@ -126,7 +126,7 @@ describe("math", function () {
     });
     it("roundTo($number, $decimalPlaces)", function (done) {
       var options = {
-        data: "@import 'math/numeric'; .math { roundTo3dP: roundTo(3.14159265359, 3); roundTo5dP: roundTo(3.14159265359, 5); }"
+        data: "@import 'math/numeric'; .math { roundTo3dP: round-to(3.14159265359, 3); roundTo5dP: round-to(3.14159265359, 5); }"
       };
       var expectedOutput = ".math { roundTo3dP: 3.142; roundTo5dP: 3.14159; }";
       testutils.assertCompiles(options, expectedOutput, done);
