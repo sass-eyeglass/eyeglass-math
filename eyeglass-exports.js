@@ -126,7 +126,7 @@ module.exports = function(eyeglass, sass) {
           }
           var unit = numbers.getValue(0).getUnit();
           for (var i = 0; i < numbers.getLength(); i++) {
-            assertUnit(numbers.getValue(i), unit); 
+            assertUnit(numbers.getValue(i), unit);
             jsValues.push(numbers.getValue(i).getValue());
           }
           done(sass.types.Number(Math.hypot.apply(Math, jsValues), unit));
