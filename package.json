@@ -8,7 +8,6 @@
     "url": "https://github.com/chriseppstein"
   },
   "license": "Apache License 2.0",
-  "main": "eyeglass-exports.js",
   "README": "README.md",
   "scripts": {
     "test": "./node_modules/.bin/gulp test"
@@ -22,7 +21,9 @@
     "eyeglass-module"
   ],
   "eyeglass": {
-    "name": "math"
+    "name": "math",
+    "needs": "^0.6.5",
+    "exports": "eyeglass-exports.js"
   },
   "dependencies": {
     "node-sass-utils": "^0.2.1"
